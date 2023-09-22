@@ -1,0 +1,31 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    # path('fromCabmanagementUrl/', views.do_hello , name = 'members'),
+    # path('doGetFilter/' , views.do_get_filter , name = 'DoGetFilter'),
+    # path('doQuery/' , views.do_query , name = 'doQuery'),
+    # path('getCustomer/', views.GetCustomer.as_view() ,name = 'getCustomer' ),
+    # path('getDriver/' , views.GetDriver.as_view() , name = 'getDriver'),
+    # path('getCab/' , views.GetCab.as_view() , name = 'getCab'),
+    # path('getBooking/', views.GetBooking.as_view() , name = 'getBooking'),
+    # path('getDriverFilter/' , views.GetDriverFilter.as_view() , name = 'getDriverFilter'),
+    # path('getCustomerFilter/' , views.GetCustomerFilter.as_view() , name = 'getCustomerFilter'),
+    # path('getCustomerContain/' , views.GetCustomerContain.as_view() , name = 'nothing'),
+    # path('getBookingOrder/' , views.GetBookingOrder.as_view() , name = 'ok'),
+    # path('addDriver/' , views.AddDriver.as_view() , name = 'Adding driver details using postman(API)'),
+    # path('addCab/' , views.AddCab.as_view() , name = 'adding cab details through postman'),
+    # path('addBooking/' , views.AddBooking.as_view() , name = 'addBooking'),
+    # path('addCustomer/' , views.AddCustomer.as_view() , name = 'addCustomer'),
+    # path('getCustomers/' , views.GetCustomers.as_view() , name = 'getCustomers'),
+    # path('getDrivers/' , views.GetDrivers.as_view() , name = 'getDriver'),
+    path('addUserInfo/' , views.AddUserInfo.as_view() , name = 'adduserInfo'),
+    path('getUsers/' , views.GetUsers.as_view() , name = 'getUsers'),
+    path('getUserInfoDetails/' , views.GetUserInfoDetails.as_view() , name = 'getUserInfoDetails'),
+    path('addCab/' , views.AddCab.as_view() , name = 'addcab'),
+    path('getCab/' , views.GetCab.as_view() , name = 'getCab'),
+    path('getCabDetails/' , views.GetCabDetails.as_view() , name = 'getCabDetails'),
+    path('addBooking/' , views.AddBooking.as_view() , name  = 'addBooking'),
+    path('getBooking/' , views.GetBooking.as_view() , name = 'getBooking'),
+    path('getBookingDetails/' , views.GetBookingDetails.as_view() , name = 'getBookingDetails'),
+]

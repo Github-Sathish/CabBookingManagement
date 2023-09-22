@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+    <body>
+        <ul>
+            <h1>all() query</h1>
+            {% for i in key_all %}
+            <li>
+                {{i.driver_id}} , {{i.name}} , {{i.email}}
+            </li>
+            {% endfor %}
+        </ul>
+        <ol>
+            <h2>order_by query based on name</h2>
+            {% for i in key_order %}
+            <li>
+                {{i.name}} 
+            </li>
+            {% endfor %}
+        </ol>
+        <ol>
+            <h1>exclude() query----excluding when name is Thulasivasan</h1>
+            {% for i in key_exclude %}
+            <li>
+                {{i.name}} , {{i.driver_id}} , {{i.age}}
+            </li>
+            {% endfor %}
+        </ol>
+        <ul>
+            <h1>Q_object in filter query which works as multiple or</h1>
+            {% for i in key_q %}
+            <li>
+                {{i.driver_id}} , {{i.name}} , {{i.email}}
+            </li>
+            {% endfor %}
+        </ul>
+
+        <ul>
+            <h1>values_list_extracted it returns a list of tuples containing values of specified field, if flat is true it return list of values not list of tuples</h1>
+            <li>
+               {{key_values_list}}
+            </li>
+ 
+        </ul>
+
+        <ul>
+            <h1>first() query it returns the first entered record</h1>
+            <li>
+                {{key_first}}
+            </li>
+        </ul>
+
+        <ul>
+            <h1>last() query it returns the recently entered values</h1>
+            <li>
+                {{key_last}}
+            </li>
+        </ul>
+        <ul>
+            <h1>After deleting using delete query associated with filter function</h1>
+            {% for i in key_after %}
+            <li>
+                {{i.driver_id}} , {{i.name}} , {{i.email}}
+            </li>
+            {% endfor %}
+        </ul>
+
+
+    </body>
+</html>
