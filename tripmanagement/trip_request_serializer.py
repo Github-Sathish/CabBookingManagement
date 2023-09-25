@@ -27,7 +27,7 @@ class ReviewValidationSerializer(serializers.Serializer):
     date_posted = serializers.DateField(required = True)
     trip_id = serializers.UUIDField(required = True)
     # review_driver_manyfield = serializers.ManyToManyField(UserInfo)
-    review_driver_manyfield = UserInfoSerializer(required = True) 
+    manyfield_driver_ids = UserInfoSerializer(required = True)   #review_driver_manyfield   manyfield_driver_ids
     
 # class ReviewValidationSerializer(serializers.Serializer):
 #     customer_name = serializers.CharField(max_length=200)

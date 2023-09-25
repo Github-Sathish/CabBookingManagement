@@ -51,7 +51,7 @@ class AddTrip(APIView):
                     trip_record_update.cab_id = data['cab_id']
                 if 'booking_id' in data:
                     trip_record_update.booking_id = data['booking_id']
-                return Response({"message" : "Review table updated successfully"})
+                return Response({"message" : "Trip table updated successfully"})
         else:
             return Response({"message" : "Invalid params"})
         
@@ -82,7 +82,6 @@ class GetTripDetails(APIView):
                    
         trip_get_serializer = TripDetailsSerializer(trip_get)
         return Response(trip_get_serializer.data)
-
 
             
 class AddReview(APIView):

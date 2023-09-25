@@ -151,7 +151,6 @@ class GetUserInfoDetails(APIView):
         return Response(userinfo_get_serializer.data)
 
 
-
 class AddCab(APIView):
     authentication_classes = [authentication.TokenAuthentication]
     permission_classes = [permissions.IsAuthenticated]
